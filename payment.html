@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .payment-method {
+            width: 200px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .payment-method:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-method img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select Payment Method</h2>
+        <div class="payment-methods">
+            <div class="payment-method" onclick="selectPayment('credit_card')">
+                <img src="IMG/credit.jpg" alt="Credit Card">
+                <p>Credit Card</p>
+            </div>
+            <div class="payment-method" onclick="selectPayment('paypal')">
+                <img src="IMG/paypal.jpeg" alt="PayPal">
+                <p>PayPal</p>
+            </div>
+            <div class="payment-method" onclick="selectPayment('bitcoin')">
+                <img src="IMG/bank.png" alt="Bitcoin">
+                <p>bank transfer</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectPayment(paymentMethod) {
+            // Store selected payment method in localStorage
+            localStorage.setItem('paymentMethod', paymentMethod);
+
+            // Redirect back to the checkout page
+            window.location.href = "checkout.html"; // Replace "checkout.html" with the actual URL of your checkout page
+        }
+    </script>
+</body>
+</html>

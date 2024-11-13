@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .cart-items {
+            margin-bottom: 20px;
+        }
+
+        .cart-items h2, .total h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .total {
+            border-top: 2px solid #333;
+            padding-top: 10px;
+        }
+
+        #cart-total {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Styles for the payment button */
+        .payment-btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .payment-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+    <hr Color="black">
+    <center>
+        <form name="frm">
+            <fieldset>
+                <legend>MENU</legend>
+                Select Your Item
+                <select name="items">
+                    <option value="0">...Select Your items... </option>
+                    <option value="sushi">sushi delight</option>
+                    <option value="pasta">pasta perfection</option>
+                    <option value="steak">prime steak</option>
+                    <option value="burger">ham burger</option>
+                    <option value="pavbhaji">pav bhaji</option>
+                    <option value="thali">maharaja thali</option>
+                </select><br><br>
+                <input type="button" value="check items" onclick="check()"><br><br>
+                Items: <input type="text" name="countrytxt" readonly><br>
+                Quantity: <input type="text" name="qty">
+                <input type="button" value="calculate" onclick="calc()">
+            </fieldset><br><br>
+            Total: <input type="text" name="ttl" readonly><br><br>
+            GST 10%: <input type="number" name="txtgst" readonly><br><br>
+            Gross price: <input type="number" name="txtgrs" readonly><br><br>
+        </form>
+        <!-- Payment button -->
+        <button class="payment-btn" onclick="redirectToPaymentPage()">PAY</button>
+
+    </center>
+
+    <script type="text/javascript">
+        var items, price;
+
+        function check() {
+            items = document.frm.items.value;
+            document.frm.countrytxt.value = items;
+        }
+
+        function calc() {
+            var qty = parseInt(document.frm.qty.value);
+            switch (items) {
+                case "sushi":
+                    price = 24.99;
+                    break;
+                case "pasta":
+                    price = 10.99;
+                    break;
+                case "steak":
+                    price = 24.99;
+                    break;
+                case "burger":
+                    price = 30.99; // Assuming a price for burger
+                    break;
+                case "pavbhaji":
+                    price = 20.99; // Assuming a price for pav bhaji
+                    break;
+                case "thali":
+                    price = 32.99; // Assuming a price for maharaja thali
+                    break;
+            }
+            var ttl = price * qty;
+            document.frm.ttl.value = ttl.toFixed(2);
+            var txtgst = ttl * 0.1;
+            document.frm.txtgst.value = txtgst.toFixed(2);
+            var txtgrs = ttl + txtgst;
+            document.frm.txtgrs.value = txtgrs.toFixed(2); 
+        }
+        // Function to redirect to the payment page
+        function redirectToPaymentPage() {
+            // Redirect to the payment page
+            window.location.href = "payment.html"; // Replace "payment.html" with the actual URL of your payment page
+        }
+    
+    </script>
+</body>
+</html>

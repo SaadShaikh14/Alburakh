@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL BURAAKH</title>
+    <style type="text/css">
+ 
+html
+{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5733;
+}
+
+.banner {
+    background-image: url('IMG/1.webp');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.banner-content {
+    max-width: 800px;
+}
+
+.banner-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d63600;
+}
+
+.menu {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    width: calc(33.33% - 40px);
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.price {
+    font-weight: bold;
+    color: #ff5733;
+    font-size: 1.2rem;
+}
+
+#about {
+    background-color: #f2f2f2;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #d63600;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+      @media only screen and (max-width: 768px) {
+   
+}
+
+@media only screen and (max-width: 480px) {
+    
+}
+.banner {
+    height: 300px; 
+}
+
+.menu-item {
+    width: calc(50% - 20px); 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>AL Buraakh</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="INDEX.html" class="nav-link">Home</a></li>
+        <li><a href=MENU.HTML class="nav-link">Menu</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+<!-- MENU BUTTON NAVBAR -->
+<section class="banner">
+    <div class="banner-content">
+        <h2>Discover Culinary Excellence</h2>
+        <p>Indulge in a symphony of flavors that tantalize your taste buds.</p>
+        <a href="file:///E:/WEBSITE/MENU.HTML" class="btn btn-primary">Explore Menu</a>
+    </div>
+</section>
+
+<section class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+        <<div class="menu-item">
+    <img src="IMG/2.jpg" alt="Sushi" height="350px">
+    <h3>Sushi Delight</h3>
+    <p>Delicate sushi rolls crafted with fresh, premium ingredients.</p>
+    <span class="price">$12.99</span><br>
+    <button class="btn btn-primary add-to-cart" data-name="Sushi Delight" data-price="12.99">Add to Cart</button>
+</div>
+
+        <div class="menu-item">
+            <img src="IMG/3.jpg" alt="Pasta" height="350px">
+            <h3>Pasta Perfection</h3>
+            <p>Authentic Italian pasta dishes cooked to perfection.</p>
+            <span class="price">$10.99</span><br>
+            <button class="btn btn-primary add-to-cart" data-name="PASTA PERFECTION" data-price="10.99">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="IMG/4.jpg" alt="Steak" height="350px">
+            <h3>Prime Steak</h3>
+            <p>Mouthwatering steak grilled to your preference.</p>
+            <span class="price">$24.99</span><br>
+            <button class="btn btn-primary add-to-cart" data-name="PRIME STEAK" data-price="24.99">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="IMG/5.jpeg" alt="burger" height="350px">
+            <h3>HAM BURGER</h3>
+            <p>Delectably seasoned, juicy hamburger piled high with savory toppings.</p>
+            <span class="price">$54.99</span><br>
+            <button class="btn btn-primary add-to-cart" data-name="HAM BURGS" data-price="54.99">Add to Cart</button>
+        </div>
+                <div class="menu-item">
+            <img src="IMG/7.jpg" alt="bhaji" height="350px">
+            <h3>Pav Bhaji</h3>
+            <p>delishious sizzling pav bhaji to give a zing to your tastebuds</p>
+            <span class="price">$30.99</span><br>
+            <button class="btn btn-primary add-to-cart" data-name="Pav bhaji" data-price="30.99">Add to Cart</button>
+        </div>
+                <div class="menu-item">
+            <img src="IMG/8.avif" alt="thali" height="350px">
+            <h3>Maharaja Thali</h3>
+            <p>royal and elegant dish for your king</p>
+            <span class="price">$50.99</span><br>
+            <button class="btn btn-primary add-to-cart" data-name="Maharaja thali" data-price="50.99">Add to Cart</button>
+        </div>
+        
+    </div>
+</section>
+
+<section id="about">
+    <div class="about-content">
+        <h2>About Us</h2>
+        <p>At Delicious Eats, we are passionate about delivering exceptional dining experiences. Our chefs meticulously craft each dish to ensure a symphony of flavors that leave you craving for more.</p>
+        <a href="#" class="btn btn-secondary">Learn More</a>
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Contact Us</h2>
+    <form action="#" method="POST" id="contact-form">
+        <input type="text" name="name" id="name" placeholder="Your Name" required>
+        <input type="email" name="email" id="email" placeholder="Your Email" required>
+        <textarea name="message" id="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+</section>
+
+
+
+<footer>
+    <p>&copy; 2024 Delicious Eats. All rights reserved.</p>
+</footer>
+
+<script>
+    // JavaScript for navigation active link
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.forEach(otherLink => otherLink.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+
+    // JavaScript for form submission
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        //  code to handle form submission, like sending data to a server
+              const formData = new FormData(form);
+        for (const entry of formData.entries()) {
+            console.log(entry[0] + ': ' + entry[1]);
+        }
+        form.reset(); // Reset the form after submission
+    });
+</script>
+
+<button class="btn btn-primary checkout">Checkout</button>
+   <link rel="stylesheet" type="text/css" href="CHECKOUT.HTML">  
+    <h1>Checkout</h1>
+    <ul id="cart-items"></ul>
+    <p id="cart-total"></p>
+<script type="text/javascript">
+   document.addEventListener("DOMContentLoaded", function() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const checkoutButton = document.querySelector('.checkout');
+    let cart = [];
+
+    // Add item to cart
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', addToCartClicked);
+    });
+
+    // Checkout button click
+    checkoutButton.addEventListener('click', checkoutClicked);
+
+    function addToCartClicked(event) {
+        // Same as before
+    }
+
+    function checkoutClicked() {
+       
+        localStorage.setItem('cart', JSON.stringify(cart));
+        // Redirect to checkout page
+        window.location.href = 'checkout.html';
+    }
+});
+
+</script>
+
+</body>
+</html>

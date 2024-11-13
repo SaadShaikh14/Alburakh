@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5733;
+}
+
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+        }
+        .menu-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer; /* Add cursor pointer for better UX */
+        }
+        .menu-item img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease; /* Add transition for smooth scaling */
+        }
+        .menu-item img.enlarged {
+            transform: scale(1.5); /* Enlarge the image */
+            z-index: 1; /* Ensure enlarged image is on top */
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="INDEX.html" class="nav-link">Home</a></li>
+        <li><a href=MENU.HTML class="nav-link">Menu</a></li>
+        <li><a href="#" class="nav-link">About Us</a></li>
+        <li><a href="#" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+<div class="menu-container">
+    <div class="menu-item" onclick="enlargeImage(this)">
+        <img src="IMG/menu1.jpg" alt="Menu 1">
+    </div>
+    <div class="menu-item" onclick="enlargeImage(this)">
+        <img src="IMG/menu2.jpg" alt="Menu 2">
+    </div>
+    <div class="menu-item" onclick="enlargeImage(this)">
+        <img src="IMG/menu-3.jpg" alt="Menu 3">
+    </div>
+    <div class="menu-item" onclick="enlargeImage(this)">
+        <img src="IMG/menu4.jpg" alt="Menu 4">
+    </div>
+    <div class="menu-item" onclick="enlargeImage(this)">
+        <img src="IMG/menu5.jpg" alt="Menu 5">
+    </div>
+    <div class="menu-item" onclick="enlargeImage(this)">
+        <img src="IMG/menu6.jpg" alt="Menu 6">
+    </div>
+</div>
+
+<script>
+    function enlargeImage(element) {
+        // Remove 'enlarged' class from all images
+        var images = document.querySelectorAll('.menu-item img');
+        images.forEach(function(img) {
+            img.classList.remove('enlarged');
+        });
+        // Add 'enlarged' class to the clicked image
+        var img = element.querySelector('img');
+        img.classList.add('enlarged');
+    }
+</script>
+
+</body>
+</html>
